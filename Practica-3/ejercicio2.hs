@@ -19,3 +19,27 @@ algunoEsCero :: Float -> Float -> Bool
 algunoEsCero a 0 = True
 algunoEsCero 0 b = True
 algunoEsCero _ _ = False
+
+-- Ejercicio E
+ambosSonCero :: Float -> Float -> Bool
+ambosSonCero 0 0 = True
+ambosSonCero _ _ = False
+
+-- Ejercicio F
+mismoIntervalo :: Float -> Float -> Bool
+mismoIntervalo a b | a <= 3 && b <= 3 = True
+mismoIntervalo a b | 3 < a && a <= 7 && 3 < b && b <= 7 = True
+mismoIntervalo a b | a > 7 && b > 7 = True
+				   | otherwise = False
+
+-- Ejercicio E
+sumaDistintos :: Integer -> Integer -> Integer -> Integer
+sumaDistintos a b c | a /= b && b /= c && a /= c = a+b+c -- Preguntar porque si no pongo "a /= c no funciona, La desigualdad es transitiva"
+					| otherwise = undefined
+
+-- Ejercicio H
+esMultiploDe :: Integer -> Integer -> Bool
+esMultiploDe a b | a>0 && b>0 && a `mod` b == 0 = True
+				 | otherwise = False
+
+-- Ejercicio I,J preguntar.
