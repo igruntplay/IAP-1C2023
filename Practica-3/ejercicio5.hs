@@ -1,8 +1,5 @@
 todosMenores :: (Integer, Integer, Integer) -> Bool
-todosMenores (x,y,z) | f(x) > g(x) = True
-todosMenores (x,y,z) | f(y) > g(y) = True
-todosMenores (x,y,z) | f(z) > g(z) = True
-                     | otherwise = False
+todosMenores (x, y, z) = (f x > g x) && (f y > g y) && (f z > g z)
 
 f :: Integer -> Integer
 f a | a <= 7 = a*a
