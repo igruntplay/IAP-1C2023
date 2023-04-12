@@ -8,3 +8,7 @@ todoMenor (a,b) (c,d) | a > c = True
 -- Ejercicio C
 distanciaPuntos :: (Float, Float) -> Float
 distanciaPuntos (a,b) = sqrt((a**2) + (b**2))
+
+-- Ejercicio D
+sumaTerna :: (Integer, Integer, Integer) -> Integer
+sumaTerna (a,b,c) = a+b+c
