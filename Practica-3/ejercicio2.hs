@@ -34,7 +34,7 @@ mismoIntervalo a b | a > 7 && b > 7 = True
 
 -- Ejercicio E
 sumaDistintos :: Integer -> Integer -> Integer -> Integer
-sumaDistintos a b c | a /= b && b /= c && a /= c = a+b+c -- Preguntar porque si no pongo "a /= c no funciona, La desigualdad es transitiva"
+sumaDistintos a b c | a /= b && b /= c && a /= c = a+b+c
 					| otherwise = undefined
 
 -- Ejercicio E, propuesto Por Santiago Rocca, preguntar en clase
