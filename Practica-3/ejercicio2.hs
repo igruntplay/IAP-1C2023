@@ -32,12 +32,12 @@ mismoIntervalo a b | 3 < a && a <= 7 && 3 < b && b <= 7 = True
 mismoIntervalo a b | a > 7 && b > 7 = True
 				   | otherwise = False
 
--- Ejercicio E
+-- Ejercicio G
 sumaDistintos :: Integer -> Integer -> Integer -> Integer
 sumaDistintos a b c | a /= b && b /= c && a /= c = a+b+c
 					| otherwise = undefined
 
--- Ejercicio E, propuesto Por Santiago Rocca, preguntar en clase
+-- Ejercicio G, propuesto Por Santiago Rocca, preguntar en clase
 sumadistintos2 :: Integer -> Integer -> Integer -> Integer
 sumadistintos2 x y z |  y==z && z==y && z==x = undefined
 sumadistintos2 x y z |  x==y = z + x
