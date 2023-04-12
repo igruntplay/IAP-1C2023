@@ -37,6 +37,14 @@ sumaDistintos :: Integer -> Integer -> Integer -> Integer
 sumaDistintos a b c | a /= b && b /= c && a /= c = a+b+c -- Preguntar porque si no pongo "a /= c no funciona, La desigualdad es transitiva"
 					| otherwise = undefined
 
+-- Ejercicio E, propuesto Por Santiago Rocca, preguntar en clase
+sumadistintos2 :: Integer -> Integer -> Integer -> Integer
+sumadistintos2 x y z |  y==z && z==y && z==x = undefined
+sumadistintos2 x y z |  x==y = z + x
+sumadistintos2 x y z |  x==z = y + x
+sumadistintos2 x y z |  y==z = x + y
+sumadistintos2 x y z |  otherwise = x + y + z
+
 -- Ejercicio H
 esMultiploDe :: Integer -> Integer -> Bool
 esMultiploDe a b | a>0 && b>0 && a `mod` b == 0 = True
