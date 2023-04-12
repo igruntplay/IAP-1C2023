@@ -27,3 +27,11 @@ posPrimerPar (a,b,c) | esPar(a) = 0
 posPrimerPar (a,b,c) | esPar(b) = 1
 posPrimerPar (a,b,c) | esPar(c) = 2
                      | otherwise = 4
+
+-- Ejercicio G
+crearPar :: a -> b -> (a,b)
+crearPar a b = (a,b)
+
+-- Ejercicio H
+invertir :: (a,b) -> (b,a)
+invertir (a,b) = (b,a)
