@@ -16,3 +16,20 @@ sumaTerna (a,b,c) = a+b+c
 -- Ejercicio E
 sumarSoloMultiplos :: (Integer, Integer, Integer) -> Integer -> Integer
 sumarSoloMultiplos (a,b,c) n = sum [i | i <- [a,b,c], i `mod` n == 0]
+
+-- Ejercicio F
+-- Auxiliar del ejercicio F
+esPar :: Integer -> Bool
+esPar a = a `mod` 2 == 0
+
+posPrimerPar :: (Integer, Integer, Integer) -> Integer
+posPrimerPar (a,0,0) = 4
+posPrimerPar (0,b,0) = 4
+posPrimerPar (0,0,c) = 4
+posPrimerPar (a,b,0) = 4
+posPrimerPar (0,b,c) = 4
+posPrimerPar (a,0,c) = 4
+posPrimerPar (a,b,c) | esPar(a) = 0
+posPrimerPar (a,b,c) | esPar(b) = 1
+posPrimerPar (a,b,c) | esPar(c) = 2
+                     | otherwise = 4
