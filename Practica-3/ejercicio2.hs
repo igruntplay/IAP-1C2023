@@ -51,3 +51,9 @@ esMultiploDe a b | a>0 && b>0 && a `mod` b == 0 = True
 				 | otherwise = False
 
 -- Ejercicio I,J preguntar.
+
+digitoUnidades :: Integer -> Integer
+digitoUnidades x = x `mod` 10
+
+digitoDecenas :: Integer -> Integer
+digitoDecenas x = div (mod x 100) 10
