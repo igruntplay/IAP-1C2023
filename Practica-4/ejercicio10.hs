@@ -19,3 +19,5 @@ f3_2 1 q = q + q^2
 f3_2 n q = f3_2 (n-1) q + q^(2*n -1) + q^(2*n)
 
 -- F4 PREGUNTAR XD!!!
+--f4
+
