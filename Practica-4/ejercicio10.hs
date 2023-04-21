@@ -18,6 +18,11 @@ f3 n q = q^(2*n) + f2 (2*n-1) q
 f3_2 1 q = q + q^2
 f3_2 n q = f3_2 (n-1) q + q^(2*n -1) + q^(2*n)
 
--- F4 PREGUNTAR XD!!!
---f4
+f4 :: Integer -> Integer -> Integer
+f4 n q = f4aux (2 * n) q n
+
+f4aux :: Integer -> Integer -> Integer -> Integer
+f4aux n q i | i == n = q^n
+            | otherwise = q^n + f4aux (n - 1) q i
+
 
