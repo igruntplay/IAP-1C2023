@@ -1,3 +1,4 @@
+-- me cuesta la interpretacion de la consigna. Preguntar al respecto con este ejercicio, 14 y 15
 f :: Integer -> Integer -> Integer
 f 1 m = faux 1 m
 f n m = f (n-1) m + faux n (m-1)
