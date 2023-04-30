@@ -1,0 +1,1 @@
+aplanar :: [Char] -> [Char]
