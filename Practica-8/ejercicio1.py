@@ -62,7 +62,7 @@ def esPalindroma(palabra:str)->bool:
             return False
     return True
 
-print(esPalindroma("aibofobia"))
+#print(esPalindroma("aibofobia"))
 ## Itero sobre la primera mitad del string, en cada iteracion se compara el caracter en la posicion actual con el caracter en la posicion correspondiente de la otra punta del string, si no son iguales da false
 
 ## Ejercicio 7
@@ -71,3 +71,30 @@ print(esPalindroma("aibofobia"))
         #if caracter.islower():
             #usaMinuscula
 # Preguntar si se puede utilizar islower is upper isdigit etc.
+
+def hayMinus(palabra:str)->bool:
+    for caracter in palabra:
+        if "a"<=caracter<="z":
+            return True
+    return False
+
+def hayMayus(palabra:str)->bool:
+    for caracter in palabra:
+        if "A"<=caracter<="Z":
+            return True
+    return False
+
+def hayDigito(palabra:str)->bool:
+    for digito in palabra:
+        if "0"<=digito<="9":
+            return True
+    return False
+
+def analizarPass(clave:str)->str:
+    if len(clave)>8 and hayMinus(clave) and hayMayus(clave) and hayDigito(clave):
+        return "VERDE"
+    elif len(clave)<5:
+        return "ROJA"
+    return "AMARILLA"
+
+print(analizarPass("Gordotutuca2023"))
