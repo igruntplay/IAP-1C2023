@@ -19,4 +19,26 @@ def nuevaLista(lista:list)->list:
     ceroEsPar(listaCopia)
     return lista, listaCopia
 
-print(nuevaLista([1,2,3,4,5,6]))
+#print(nuevaLista([1,2,3,4,5,6]))
+
+def quitarVocales(palabra:str)->str:
+    vocales = 'aeiouAEIOU'
+    longitudPalabra = 0
+    # Determinar la longitud de la palabra
+    for c in palabra:
+        longitudPalabra += 1
+
+    # Crear palabra sin vocales
+    nuevaPalabra = ''
+    for i in range(longitudPalabra):
+        es_vocal = False
+        for vocal in vocales:
+            if palabra[i] == vocal:
+                es_vocal = True
+                break
+        if not es_vocal:
+            nuevaPalabra = nuevaPalabra + palabra[i]
+    
+    return nuevaPalabra
+
+print(quitarVocales("hola"))
