@@ -1,0 +1,2 @@
+mayorDigitoPar :: Integer -> Integer
+{-- PREGUNTAR -- }

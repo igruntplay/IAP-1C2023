@@ -19,6 +19,6 @@ sonCoprimos :: Integer -> Integer -> Bool
 sonCoprimos n m | (maximoComunDivisor n m) == 1 = True
                 | otherwise = False
 
-{- incompleto
+{- incompleto PREGUNTAR
 nEsimoPrimo :: Integer -> Integer
 nEsimoPrimo n = nEsimoPrimoAux-}
