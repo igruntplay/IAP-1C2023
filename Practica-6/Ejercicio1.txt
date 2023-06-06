@@ -1,0 +1,20 @@
+1.1: El objetivo de realizar un testing de un software es poder comprobar que se cumpla la especificación del mismo y que no tenga errores, bugs, y/o vulnerabilidades.
+1.2: No siempre, pero nos aproxima a que funcione con un comportamiento esperado, pero nunca es 100% preciso.
+1.3: Una prueba de caja negra es basicamente una prueba a ciegas sin el código de la implementación. Únicamente con la especificación.
+1.4: Tecnicamente no, en esta materia testing de caja negra = requerir especificación
+
+2.1: Los factores del programa serían la operación matematica, y los tres numeros enteros
+2.2: La suma de los numeros enteros y que compare la desigualdad de a+b > c siendo este el tercer lado
+2.3: Que sean numeros positivos.
+2.4: 
+
+3: (input, expected) : (R : Z)
+(0.5,0)
+(0.9,1)
+(1.4,1)
+(1.9,2)
+
+4: (input, [input], [expected]) : (T : [T]) => [T]
+(2,[2]) => []
+("a", ["a"]) => []
+(True, [True,False]) => [False]
