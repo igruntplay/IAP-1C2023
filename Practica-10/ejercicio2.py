@@ -22,7 +22,7 @@ def apilarNumeros(n:int,desde:int,hasta:int):
         nuevaPila.put(i)
     return nuevaPila
 
-pila_prueba = apilarNumeros(3,0,5)
-
-while(not pila_prueba.empty()):
-    print(pila_prueba.get())
+def imprimirPila():
+    pila_prueba = apilarNumeros(3,0,5)
+    while(not pila_prueba.empty()):
+        print(pila_prueba.get())
