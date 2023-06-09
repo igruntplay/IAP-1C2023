@@ -40,4 +40,27 @@ def cantidadElementos(p:Pila)->int:
         i+=1
     return i
 
-print(cantidadElementos(pilita))
+#print(cantidadElementos(pilita))
+
+# Ejercicio 11 IDEA: Estoy pensando en listar la pila de entero con forma de lista y hacer el max de esa lista y listo.
+def buscarelMaximo(pilita:Pila)->int:
+    # dada una pila de enteros, implementar que devuelva el maximo de elementos que contiene
+    listaDePila = pilaAlista(pilita)
+    return max(listaDePila)
+
+def pilaAlista(pilita:Pila)->list[int]:
+    listaDePila: list[int] = [] # Inicializo mi lista vacía
+    while not pilita.empty():
+        elemento:int = pilita.get()
+        listaDePila.append(elemento)
+    return listaDePila
+
+def testBuscarElMaximo():
+    # Generar una pila con números al azar
+    pilita = apilarNumeros(5, 0, 20)
+
+    # Encontrar y imprimir el máximo de la pila
+    maximo = buscarelMaximo(pilita)
+    print("El máximo es:", maximo)
+
+testBuscarElMaximo()
