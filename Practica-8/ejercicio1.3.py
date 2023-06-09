@@ -39,6 +39,4 @@ def quitarVocales(palabra:str)->str:
         if not es_vocal:
             nuevaPalabra = nuevaPalabra + palabra[i]
     
-    return nuevaPalabra
-
-print(quitarVocales("hola"))
+    return nuevaPalabra    
