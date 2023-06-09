@@ -64,3 +64,23 @@ def testBuscarElMaximo():
     print("El máximo es:", maximo)
 
 testBuscarElMaximo()
+
+# Ejercicio 12
+#def estaBienBalanceada(s:str)->bool
+# preguntar ejercicio 12
+
+
+# Ejercicio 13 Parte 3
+from queue import Queue as Cola
+
+#c = Cola()
+#c.put(1) # Encolar
+#elemento = c.get() # Desencolar ()
+#c.empty # Se pregunta si está vacía, devuelve bool
+
+#def armarColaDeEnteros(numeros:list[int])->Cola:
+ #   c = Cola()
+  #  numeros = generarNrosAlAzar(3,0,4)
+   # for i in numeros
+
+   # Ejercicio incompleto
