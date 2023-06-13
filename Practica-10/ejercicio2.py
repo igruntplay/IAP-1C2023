@@ -63,7 +63,7 @@ def testBuscarElMaximo():
     maximo = buscarelMaximo(pilita)
     print("El máximo es:", maximo)
 
-testBuscarElMaximo()
+#testBuscarElMaximo()
 
 # Ejercicio 12
 #def estaBienBalanceada(s:str)->bool
@@ -72,15 +72,24 @@ testBuscarElMaximo()
 
 # Ejercicio 13 Parte 3
 from queue import Queue as Cola
-
+#Ejercicio 13. Usando la funci´on generarNrosAlAzar() definida en la secci´on anterior, implementar una funci´on que arme una
+#cola de enteros con los numeros generados al azar. Pueden usar la clase Queue() que es un ejemplo de una implementaci´on b´asica:
 #c = Cola()
 #c.put(1) # Encolar
 #elemento = c.get() # Desencolar ()
 #c.empty # Se pregunta si está vacía, devuelve bool
 
-#def armarColaDeEnteros(numeros:list[int])->Cola:
- #   c = Cola()
-  #  numeros = generarNrosAlAzar(3,0,4)
-   # for i in numeros
+def armarColaDeEnteros(numeros:list[int])->Cola:
+    c = Cola()
+    numeros = generarNrosAlAzar(3,0,4)
+    for i in numeros:
+        c.put(i)
+    return c
 
-   # Ejercicio incompleto
+# Descomentar esto para probar el ejercicio 13
+#numeros = generarNrosAlAzar(3, 0, 4)
+#cola = armarColaDeEnteros(numeros)
+#cola = armarColaDeEnteros(numeros)
+#print("Elementos en la cola:")
+#while not cola.empty():
+#    print(cola.get())
