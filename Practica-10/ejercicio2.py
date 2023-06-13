@@ -87,9 +87,33 @@ def armarColaDeEnteros(numeros:list[int])->Cola:
     return c
 
 # Descomentar esto para probar el ejercicio 13
-#numeros = generarNrosAlAzar(3, 0, 4)
+numeros = generarNrosAlAzar(3, 0, 4)
 #cola = armarColaDeEnteros(numeros)
 #cola = armarColaDeEnteros(numeros)
 #print("Elementos en la cola:")
 #while not cola.empty():
 #    print(cola.get())
+cola = armarColaDeEnteros(numeros)
+
+# Ejercicio 14
+def cantidadElementos(c:cola)->int:
+    # Dada una cola, cuenta la cantidad de elementos que contiene.
+    contador:int = 0 # Inicializo contador en cero
+    while not c.empty():
+        numero = c.get() # Desencola
+        contador+=1
+    return contador
+# Probar ejercicio 14
+#print("Cantidad de elementos en la cola:", cantidadElementos(cola))
+
+# Ejercicio 15: Dada una cola de enteros, implementar una funcion buscarElMaximo que devuelva el maximo elemento, comprar con la versión usando pila
+# misma idea: Recorrer la cola y armar una lista, sacar maximo
+def buscarElMaximo(c:cola)->int:
+    lista:list[int] = [] # Inicializo lista vacía
+    while not c.empty():
+        numero = c.get()
+        lista.append(numero)
+        print("La fila esta conformada por: ",lista)
+    return max(lista)
+#Probar ejercicio 15
+#print("EJERCICIO 15 ",buscarElMaximo(cola))
