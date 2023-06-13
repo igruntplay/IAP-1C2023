@@ -78,9 +78,8 @@ from queue import Queue as Cola
 #c.put(1) # Encolar
 #elemento = c.get() # Desencolar ()
 #c.empty # Se pregunta si está vacía, devuelve bool
-
+c = Cola()
 def armarColaDeEnteros(numeros:list[int])->Cola:
-    c = Cola()
     numeros = generarNrosAlAzar(3,0,4)
     for i in numeros:
         c.put(i)
@@ -117,3 +116,34 @@ def buscarElMaximo(c:cola)->int:
     return max(lista)
 #Probar ejercicio 15
 #print("EJERCICIO 15 ",buscarElMaximo(cola))
+
+# Ejercicio 16 A:
+def armarSecuenciaDeBingo()->Cola[int]:
+    colaBingo = Cola[int]() # Cola Vacía
+    numeros = generarNrosAlAzar(99,0,99)
+    for numero in numeros:
+        colaBingo.put(numero)
+    return colaBingo
+
+bingoSecuencia = armarSecuenciaDeBingo()
+# Imprimo la secuencia para probar:
+#while not bingoSecuencia.empty():
+#    print(bingoSecuencia.get())
+
+#Ejercicio 16 B
+bolillero = armarColaDeEnteros(generarNrosAlAzar(100, 0, 100))
+ # ¿Para que me hacen hacer esto si los bolilleros son una constante?
+carton = generarNrosAlAzar(12,0,99)
+def jugarCartonDeBingo(carton:list[int],bolillero:Cola)->int:
+    jugadas:int = 0 # Contador de jugadas
+    while not bolillero.empty():
+        jugada = bolillero.get()
+        jugadas += 1
+        if jugada in carton:
+            carton.remove(jugada)
+        if len(carton)==0:
+            break
+    return jugadas
+
+jugadas = jugarCartonDeBingo(carton, bolillero)
+print("Cantidad de jugadas necesarias para ganar:", jugadas)
