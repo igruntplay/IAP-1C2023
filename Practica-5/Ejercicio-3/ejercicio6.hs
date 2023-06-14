@@ -1,4 +1,3 @@
-
 sumarElUltimo :: [Integer] -> [Integer]
 sumarElUltimo (x:xs) = sumarElPrimeroAux x (x:xs)
 
