@@ -147,3 +147,14 @@ def jugarCartonDeBingo(carton:list[int],bolillero:Cola)->int:
 
 jugadas = jugarCartonDeBingo(carton, bolillero)
 print("Cantidad de jugadas necesarias para ganar:", jugadas)
+
+''' INCOMPLETO!
+def nPacientesUrgentes(c:Cola[(int,str,str)])->int:
+    c = []
+    contador:int = 0
+    for paciente in c:
+        if paciente[0] >= 1 and paciente[0] <=3:
+            contador += 1
+
+            
+'''
