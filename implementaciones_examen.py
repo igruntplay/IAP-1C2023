@@ -28,7 +28,7 @@ def secuencia (L:List[int], n:int)->List[int]:
             res.append(L[i])
     return res
 
-print(secuencia([1,2,3,4],0))
+#print(secuencia([1,2,3,4],0))
 
 
 
@@ -65,4 +65,18 @@ def filasOrdenadas(m: List[List[int]]) -> List[bool]:
             res.append(False)
     return res
 
-print(filasOrdenadas([[0,1,2,3],[0,1,2,3],[5,2,22]]))
+#print(filasOrdenadas([[0,1,2,3],[0,1,2,3],[5,2,22]]))
+
+def n1 (L:List[int],n:int)->int:
+    return L[n]
+
+#print(n1([1,2,3,4],0))
+
+def quitarRepetidos (b:List[int])->List[int]:
+    res:list[int]=[]
+    for i in b:
+        if i not in res:
+            res.append(i)
+    return res
+
+print(quitarRepetidos([1,0,1,0,2,6,8,2]))

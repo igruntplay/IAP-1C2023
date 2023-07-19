@@ -52,3 +52,18 @@ ordenados [] = True
 ordenados [e] = True
 ordenados (x:y:xs) | (x <= y) = ordenados (y:xs)
                    | otherwise = False
+
+n1 :: [Integer] -> Integer -> Integer
+n1 (x:xs) 0 = x
+n1 (x:xs) n = n1 xs (n-1)
+
+buscarPosicion :: [Integer] -> Integer -> Integer
+buscarPosicion [] _ = undefined
+buscarPosicion (x:xs) c | x == c = 0
+                        | otherwise =  1 + buscarPosicion xs c
+
+quitarRepetidos :: [Integer] -> [Integer]
+quitarRepetidos [] = []
+quitarRepetidos [x] = [x]
+quitarRepetidos (x:y:xs) | x == y = x : quitarRepetidos xs
+                         | otherwise = x : y : quitarRepetidos xs
